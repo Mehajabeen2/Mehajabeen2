@@ -13,7 +13,7 @@ const drawGame = () => {
 }
 const showWinner = (userWin, userChoice, compChoice)=>{
     if(userWin){
-        userScore ++;
+        userScore++;
         userScorePara.innerText = userScore;
         msg.innerText = `You Win. Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green"
@@ -22,13 +22,13 @@ const showWinner = (userWin, userChoice, compChoice)=>{
         compScore++;
         compScorePara.innerText = compScore;
         msg.innerText = `You lost. ${compChoice} beats ${userChoice}`;
-        msg.style.backgroundColor = "red"
+        msg.style.backgroundColor = "red";
     }
 }
 
 const genComputerChoice = () => {
     let options = ["rock", "paper", "scissors"];
-    //rock, paper, scissors
+    // rock, paper, scissors
     const randomIndex = Math.floor(Math.random() * 3);
     return options[randomIndex];
 }
@@ -43,7 +43,7 @@ const playGame = (userChoice) => {
     else {
         let userWin = true;
         if(userChoice === 'rock') {
-            userWin = compChoice === paper ? false :true;
+            userWin = compChoice === "paper" ? false :true;
         }
         else if(userChoice === 'paper') {
             userWin = compChoice === "scissors" ? false : true;
